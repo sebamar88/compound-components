@@ -30,8 +30,8 @@ describe("Card Testing", () => {
     it("should render Card", () => {
         const wrapper = render(
             <div>
-                {cards.map((card) => (
-                    <Card>
+                {cards.map((card, index) => (
+                    <Card key={card.title + "-" + index}>
                         <Card.Header>
                             <Card.Title>{card.title}</Card.Title>
                             <Card.Image src={card.image} />
