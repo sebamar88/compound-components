@@ -25,8 +25,8 @@ function App() {
     return (
         <div className="App">
             <div className="cardList">
-                {cards.map((card) => (
-                    <Card>
+                {cards.map((card, index) => (
+                    <Card key={card.title + "-" + index}>
                         <Card.Header>
                             <Card.Title>{card.title}</Card.Title>
                             <Card.Image src={card.image} />
